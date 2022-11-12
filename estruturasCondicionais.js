@@ -23,9 +23,9 @@ if (!terminarTrabalho === true || !terCompromisso === true){
 
 // DESAFIO PRIMOS
 
-var num = 7
+var num = 11
 
-num % 2 === 0 && num % 3 === 0 && num % 5 === 0 ? console.log('O número não é primo') : console.log('O número é primo')
+num % 2 === 0 || num % 3 === 0 || num % 5 === 0 ? console.log('O número não é primo') : console.log('O número é primo')
 
 // DESAFIO TERNÁRIO
 
