@@ -15,23 +15,43 @@
 
 // confirmarDados('Marcos');
 
-VAR, LET E CONST 
+// VAR, LET E CONST 
 
-function confirmarDados(nome){
-    const nomeCompleto = nome + ' da Silva';
-    let geracao = 'millenium';
-    function getAnoNascimento(){
-        let idade = 40;
-        let ano = 2022 - idade;
-        return ano
+// function confirmarDados(nome){
+//     const nomeCompleto = nome + ' da Silva';
+//     let geracao = 'millenium';
+//     function getAnoNascimento(){
+//         let idade = 40;
+//         let ano = 2022 - idade;
+//         return ano
+//     }
+//     const anoDeNascimento = getAnoNascimento();
+//     if(anoDeNascimento <= 1995){
+//         geracao = 'geração X';
+//     }
+//     console.log('nome completo:', nomeCompleto);
+//     console.log('ano de nascimento:', anoDeNascimento);
+//     console.log('geração:', geracao);
+// }
+// confirmarDados('Marcos')
+
+// TRY...CATCH
+
+try {
+    function confirmarDados(nome) {
+        var nomeCompleto = nome + ' da Silva';
+        function getAnoNascimento() {
+            var idade = 20;
+            var ano = 2022 - idade;
+            return ano
+        }
+        console.log('nome completo:', nomeCompleto);
+        console.log('ano de nascimento:', getAnoNascimento());
+        console.log('idade:', idade);
     }
-    const anoDeNascimento = getAnoNascimento();
-    if(anoDeNascimento <= 1995){
-        geracao = 'geração X';
-    }
-    console.log('nome completo:', nomeCompleto);
-    console.log('ano de nascimento:', anoDeNascimento);
-    console.log('geração:', geracao);
+    throw 'erro'
+} catch(error){
+    console.log('Um erro foi encontrado e não foi possível concluir a operação')
 }
-confirmarDados('Marcos')
 
+confirmarDados('Marcos');
