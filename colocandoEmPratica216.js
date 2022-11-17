@@ -66,15 +66,15 @@ function confirmarDados(nome, idade){
     }
     var anoDeNascimento = getAnoNascimento();
     function geracaoPertence(geracao){
+        if(anoDeNascimento <= 1995){
+            var geracao = 'X'
+        } else {
+            geracao = 'millenium'
+        }
         return geracao
-    }
-    if(anoDeNascimento <= 1995){
-        var geracao = geracaoPertence('X')
-    } else {
-        var geracao = geracaoPertence('millenium')
     }
     console.log('nome completo:', nomeCompleto)
     console.log('ano de nascimento:', anoDeNascimento)
-    console.log('geração:', geracao)
+    console.log('geração:', geracaoPertence())
 }
 confirmarDados('Marcos', 40);
